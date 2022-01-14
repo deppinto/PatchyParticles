@@ -36,13 +36,19 @@ free(array);
 
 
 void _init_tetrahedral_patches(System *syst, Output *output_files) {
-	syst->n_patches = 4;
+	syst->n_patches = 5;
 	syst->base_patches = malloc(sizeof(vector) * syst->n_patches);
-	double half_isqrt3 = 0.5 / sqrt(3);
-	set_vector(syst->base_patches[0], -half_isqrt3, -half_isqrt3,  half_isqrt3);
-	set_vector(syst->base_patches[1], half_isqrt3, -half_isqrt3, -half_isqrt3);
-	set_vector(syst->base_patches[2], half_isqrt3,  half_isqrt3,  half_isqrt3);
-	set_vector(syst->base_patches[3], -half_isqrt3,  half_isqrt3, -half_isqrt3);
+	//double half_isqrt3 = 0.5 / sqrt(3);
+	//set_vector(syst->base_patches[0], -half_isqrt3, -half_isqrt3,  half_isqrt3);
+	//set_vector(syst->base_patches[1], half_isqrt3, -half_isqrt3, -half_isqrt3);
+	//set_vector(syst->base_patches[2], half_isqrt3,  half_isqrt3,  half_isqrt3);
+	//set_vector(syst->base_patches[3], -half_isqrt3,  half_isqrt3, -half_isqrt3);
+
+        set_vector(syst->base_patches[0], -0.26069355,  0.33775397,  0.26069355);
+        set_vector(syst->base_patches[1], -0.26069355, -0.14173622,  0.40242977);
+        set_vector(syst->base_patches[2], 0.14173622, -0.40242977,  0.26069355);
+        set_vector(syst->base_patches[3], 0.47949019, -0.14173622,  0.0);
+        set_vector(syst->base_patches[4], 0.14173622, 0.47949019, 0.0);
 
 	int i, j;
 	for(i = 0; i < syst->n_patches; i++) normalize(syst->base_patches[i]);
