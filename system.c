@@ -44,11 +44,11 @@ void _init_tetrahedral_patches(System *syst, Output *output_files) {
 	//set_vector(syst->base_patches[2], half_isqrt3,  half_isqrt3,  half_isqrt3);
 	//set_vector(syst->base_patches[3], -half_isqrt3,  half_isqrt3, -half_isqrt3);
 
-        set_vector(syst->base_patches[0], -0.26069355,  0.33775397,  0.26069355);
-        set_vector(syst->base_patches[1], -0.26069355, -0.14173622,  0.40242977);
-        set_vector(syst->base_patches[2], 0.14173622, -0.40242977,  0.26069355);
-        set_vector(syst->base_patches[3], 0.47949019, -0.14173622,  0.0);
-        set_vector(syst->base_patches[4], 0.14173622, 0.47949019, 0.0);
+        set_vector(syst->base_patches[0], -0.698025/2,  0.186027/2,  -0.691488/2);
+        set_vector(syst->base_patches[1], -0.502114/2, -0.756162/2,  -0.419643/2);
+        set_vector(syst->base_patches[2], -0.122606/2, -0.857303/2,  0.500000/2);
+        set_vector(syst->base_patches[3], 0., 0., 1./2);
+        set_vector(syst->base_patches[4], -0.482942/2, 0.875653/2, 0.);
 
 	int i, j;
 	for(i = 0; i < syst->n_patches; i++) normalize(syst->base_patches[i]);

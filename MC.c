@@ -422,6 +422,7 @@ double MC_energy(System *syst, PatchyParticle *p) {
 						}
 						else if(val == OVERLAP) {
 							syst->overlap = 1;
+							//printf("\nParticles overlapping: %d %d %d %d\n", q->index, p->index, val, OVERLAP);
 							return 0.;
 						}
 					}
